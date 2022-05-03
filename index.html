@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team VarsITy</title>
     <link rel="stylesheet" href="./main.css" />
-    </head>
+</head>
 
 <body>
     <header id="main-header" class="header">
@@ -31,6 +31,12 @@
         </div>
         <div id="fileTest">
             <h4> File test component </h4>
+            <div id="displayTest">
+                <!-- Allows you to select a text file and upload for viewing -->
+                <button id="displayBtn">Display</button>
+                <!-- Separated text file can be shown here -->
+                <textarea cols="40" rows="20" id="testOutput"></textarea>
+            </div>
         </div>
     </div>
     <!-- JAVASCRIPT -->
@@ -42,54 +48,54 @@
         // Source: https://www.javatpoint.com/javascript-create-and-download-csv-file
         const csvFileData =
             [
-            ['Brazil', '2020/21', 'Net Importer', 'Import Dependent', 'Stock Increase', 'RUS', '171%', 'Above Average'],
-            ['Egypt', '2020/21', 'Net Importer', 'Import Dependent', 'Stock Increase', 'RUS', '320%', 'Above Average'],
-            ['Indonesia', '2020/21', 'Net Importer', 'Import Dependent', 'Stock Increase', 'RUS', '133%', 'Above Average'],
-            ['Japan', '2020/21', 'Net Importer', 'Import Dependent', 'Stock Increase', 'UA', '143%', 'Above Average'],
-            ['Viet Nam', '2020/21', 'Net Importer', 'Import Dependent', 'Stock Decrease', 'RUS', '233%', 'Above Average'],
-            ['Republic of Korea', '2020/21', 'Net Importer', 'Import Dependent', 'Stock Increase', 'UA', '208%', 'Above Average'],
-            ['United Kingdom', '2020/21', 'Net Importer', 'Import Dependent', 'Stock Decrease', 'UA', '138%', 'Above Average'],
-            ['China', '2020/21', 'Net Importer', 'Surplus', 'Stock Decrease', 'RUS', '221%', 'Above Average'],
-            ['Nigeria', '2020/21', 'Net Importer', 'Import Dependent', 'Stock Decrease', 'RUS', '11%', 'Below Average'],
-            ['South Africa', '2020/21', 'Net Importer', 'Import Dependent', 'Stock Decrease', 'RUS', '41%', 'Below Average'],
-            ['Thailand', '2020/21', 'Net Importer', 'Import Dependent', 'Stock Increase', 'RUS', '84%', 'Below Average'],
-            ['Mexico', '2020/21', 'Net Importer', 'Import Dependent', 'Stock Increase', 'RUS', '58%', 'Below Average'],
-            ['Philippines', '2020/21', 'Net Importer', 'Import Dependent', 'Stock Increase', 'RUS', '95%', 'Below Average'],
-            ['Saudi Arabia', '2020/21', 'Net Importer', 'Import Dependent', 'Stock Increase', 'RUS', '46%', 'Below Average'],
-            ['Turkey', '2020/21', 'Net Importer', 'Import Dependent', 'Stock Decrease', 'RUS', '62%', 'Below Average'],
-            ['Australia', '2020/21', 'Net Exporter', 'Surplus', 'Stock Decrease', 'UA', '48%', 'Below Average'],
-            ['Canada', '2020/21', 'Net Exporter', 'Surplus', 'Stock Decrease', 'UA', '63%', 'Below Average'],
-            ['European Union', '2020/21', 'Net Exporter', 'Surplus', 'Stock Increase', 'UA', '87%', 'Below Average'],
-            ['Argentina', '2020/21', 'Net Exporter', 'Surplus', 'Stock Increase', 'RUS', '27%', 'Below Average'],
-            ['India', '2020/21', 'Net Exporter', 'Surplus', 'Stock Decrease', 'RUS', '98%', 'Below Average'],
-            ['Kazakhstan', '2020/21', 'Net Exporter', 'Surplus', 'Stock Decrease', 'RUS', '5%', 'Below Average'],
-            ['Russian Federation', '2020/21', 'Net Exporter', 'Surplus', 'Stock Decrease', 'RUS', '12%', 'Below Average'],
-            ['Ukraine', '2020/21', 'Net Exporter', 'Surplus', 'Stock Increase', 'UA', '37%', 'Below Average'],
-            ['United States of America', '2020/21', 'Net Exporter', 'Surplus', 'Stock Increase', 'UA', '72%', 'Below Average'],
-            ['Brazil', '2021/22', 'Net Importer', 'Import Dependent', 'Stock Decrease', 'RUS', '171%', 'Above Average'],
-            ['Egypt', '2021/22', 'Net Importer', 'Import Dependent', 'Stock Decrease', 'RUS', '320%', 'Above Average'],
-            ['Indonesia', '2021/22', 'Net Importer', 'Import Dependent', 'Stock Decrease', 'RUS', '133%', 'Above Average'],
-            ['Japan', '2021/22', 'Net Importer', 'Import Dependent', 'Stock Decrease', 'UA', '143%', 'Above Average'],
-            ['Viet Nam', '2021/22', 'Net Importer', 'Import Dependent', 'Stock Decrease', 'RUS', '233%', 'Above Average'],
-            ['Republic of Korea', '2021/22', 'Net Importer', 'Import Dependent', 'Stock Decrease', 'UA', '208%', 'Above Average'],
-            ['United Kingdom', '2021/22', 'Net Importer', 'Import Dependent', 'Stock Decrease', 'UA', '138%', 'Above Average'],
-            ['China', '2021/22', 'Net Importer', 'Surplus', 'Stock Increase', 'RUS', '221%', 'Above Average'],
-            ['Nigeria', '2021/22', 'Net Importer', 'Import Dependent', 'Stock Decrease', 'RUS', '11%', 'Below Average'],
-            ['South Africa', '2021/22', 'Net Importer', 'Import Dependent', 'Stock Decrease', 'RUS', '41%', 'Below Average'],
-            ['Thailand', '2021/22', 'Net Importer', 'Import Dependent', 'Stock Decrease', 'RUS', '84%', 'Below Average'],
-            ['Mexico', '2021/22', 'Net Importer', 'Import Dependent', 'Stock Increase', 'RUS', '58%', 'Below Average'],
-            ['Philippines', '2021/22', 'Net Importer', 'Import Dependent', 'Stock Increase', 'RUS', '95%', 'Below Average'],
-            ['Saudi Arabia', '2021/22', 'Net Importer', 'Import Dependent', 'Stock Increase', 'RUS', '46%', 'Below Average'],
-            ['Turkey', '2021/22', 'Net Importer', 'Import Dependent', 'Stock Increase', 'RUS', '62%', 'Below Average'],
-            ['Australia', '2021/22', 'Net Exporter', 'Surplus', 'Stock Increase', 'UA', '48%', 'Below Average'],
-            ['Canada', '2021/22', 'Net Exporter', 'Surplus', 'Stock Decrease', 'UA', '63%', 'Below Average'],
-            ['European Union', '2021/22', 'Net Exporter', 'Surplus', 'Stock Decrease', 'UA', '87%', 'Below Average'],
-            ['Argentina', '2021/22', 'Net Exporter', 'Surplus', 'Stock Increase', 'RUS', '27%', 'Below Average'],
-            ['India', '2021/22', 'Net Exporter', 'Surplus', 'Stock Increase', 'RUS', '98%', 'Below Average'],
-            ['Kazakhstan', '2021/22', 'Net Exporter', 'Surplus', 'Stock Increase', 'RUS', '5%', 'Below Average'],
-            ['Russian Federation', '2021/22', 'Net Exporter', 'Surplus', 'Stock Increase', 'RUS', '12%', 'Below Average'],
-            ['Ukraine', '2021/22', 'Net Exporter', 'Surplus', 'Stock Increase', 'UA', '37%', 'Below Average'],
-            ['United States of America', '2021/22', 'Net Exporter', 'Surplus', 'Stock Increase', 'UA', '72%', 'Below Average'],
+                ['Brazil', '2020/21', 'Net Importer', 'Import Dependent', 'Stock Increase', 'RUS', '171%', 'Above Average'],
+                ['Egypt', '2020/21', 'Net Importer', 'Import Dependent', 'Stock Increase', 'RUS', '320%', 'Above Average'],
+                ['Indonesia', '2020/21', 'Net Importer', 'Import Dependent', 'Stock Increase', 'RUS', '133%', 'Above Average'],
+                ['Japan', '2020/21', 'Net Importer', 'Import Dependent', 'Stock Increase', 'UA', '143%', 'Above Average'],
+                ['Viet Nam', '2020/21', 'Net Importer', 'Import Dependent', 'Stock Decrease', 'RUS', '233%', 'Above Average'],
+                ['Republic of Korea', '2020/21', 'Net Importer', 'Import Dependent', 'Stock Increase', 'UA', '208%', 'Above Average'],
+                ['United Kingdom', '2020/21', 'Net Importer', 'Import Dependent', 'Stock Decrease', 'UA', '138%', 'Above Average'],
+                ['China', '2020/21', 'Net Importer', 'Surplus', 'Stock Decrease', 'RUS', '221%', 'Above Average'],
+                ['Nigeria', '2020/21', 'Net Importer', 'Import Dependent', 'Stock Decrease', 'RUS', '11%', 'Below Average'],
+                ['South Africa', '2020/21', 'Net Importer', 'Import Dependent', 'Stock Decrease', 'RUS', '41%', 'Below Average'],
+                ['Thailand', '2020/21', 'Net Importer', 'Import Dependent', 'Stock Increase', 'RUS', '84%', 'Below Average'],
+                ['Mexico', '2020/21', 'Net Importer', 'Import Dependent', 'Stock Increase', 'RUS', '58%', 'Below Average'],
+                ['Philippines', '2020/21', 'Net Importer', 'Import Dependent', 'Stock Increase', 'RUS', '95%', 'Below Average'],
+                ['Saudi Arabia', '2020/21', 'Net Importer', 'Import Dependent', 'Stock Increase', 'RUS', '46%', 'Below Average'],
+                ['Turkey', '2020/21', 'Net Importer', 'Import Dependent', 'Stock Decrease', 'RUS', '62%', 'Below Average'],
+                ['Australia', '2020/21', 'Net Exporter', 'Surplus', 'Stock Decrease', 'UA', '48%', 'Below Average'],
+                ['Canada', '2020/21', 'Net Exporter', 'Surplus', 'Stock Decrease', 'UA', '63%', 'Below Average'],
+                ['European Union', '2020/21', 'Net Exporter', 'Surplus', 'Stock Increase', 'UA', '87%', 'Below Average'],
+                ['Argentina', '2020/21', 'Net Exporter', 'Surplus', 'Stock Increase', 'RUS', '27%', 'Below Average'],
+                ['India', '2020/21', 'Net Exporter', 'Surplus', 'Stock Decrease', 'RUS', '98%', 'Below Average'],
+                ['Kazakhstan', '2020/21', 'Net Exporter', 'Surplus', 'Stock Decrease', 'RUS', '5%', 'Below Average'],
+                ['Russian Federation', '2020/21', 'Net Exporter', 'Surplus', 'Stock Decrease', 'RUS', '12%', 'Below Average'],
+                ['Ukraine', '2020/21', 'Net Exporter', 'Surplus', 'Stock Increase', 'UA', '37%', 'Below Average'],
+                ['United States of America', '2020/21', 'Net Exporter', 'Surplus', 'Stock Increase', 'UA', '72%', 'Below Average'],
+                ['Brazil', '2021/22', 'Net Importer', 'Import Dependent', 'Stock Decrease', 'RUS', '171%', 'Above Average'],
+                ['Egypt', '2021/22', 'Net Importer', 'Import Dependent', 'Stock Decrease', 'RUS', '320%', 'Above Average'],
+                ['Indonesia', '2021/22', 'Net Importer', 'Import Dependent', 'Stock Decrease', 'RUS', '133%', 'Above Average'],
+                ['Japan', '2021/22', 'Net Importer', 'Import Dependent', 'Stock Decrease', 'UA', '143%', 'Above Average'],
+                ['Viet Nam', '2021/22', 'Net Importer', 'Import Dependent', 'Stock Decrease', 'RUS', '233%', 'Above Average'],
+                ['Republic of Korea', '2021/22', 'Net Importer', 'Import Dependent', 'Stock Decrease', 'UA', '208%', 'Above Average'],
+                ['United Kingdom', '2021/22', 'Net Importer', 'Import Dependent', 'Stock Decrease', 'UA', '138%', 'Above Average'],
+                ['China', '2021/22', 'Net Importer', 'Surplus', 'Stock Increase', 'RUS', '221%', 'Above Average'],
+                ['Nigeria', '2021/22', 'Net Importer', 'Import Dependent', 'Stock Decrease', 'RUS', '11%', 'Below Average'],
+                ['South Africa', '2021/22', 'Net Importer', 'Import Dependent', 'Stock Decrease', 'RUS', '41%', 'Below Average'],
+                ['Thailand', '2021/22', 'Net Importer', 'Import Dependent', 'Stock Decrease', 'RUS', '84%', 'Below Average'],
+                ['Mexico', '2021/22', 'Net Importer', 'Import Dependent', 'Stock Increase', 'RUS', '58%', 'Below Average'],
+                ['Philippines', '2021/22', 'Net Importer', 'Import Dependent', 'Stock Increase', 'RUS', '95%', 'Below Average'],
+                ['Saudi Arabia', '2021/22', 'Net Importer', 'Import Dependent', 'Stock Increase', 'RUS', '46%', 'Below Average'],
+                ['Turkey', '2021/22', 'Net Importer', 'Import Dependent', 'Stock Increase', 'RUS', '62%', 'Below Average'],
+                ['Australia', '2021/22', 'Net Exporter', 'Surplus', 'Stock Increase', 'UA', '48%', 'Below Average'],
+                ['Canada', '2021/22', 'Net Exporter', 'Surplus', 'Stock Decrease', 'UA', '63%', 'Below Average'],
+                ['European Union', '2021/22', 'Net Exporter', 'Surplus', 'Stock Decrease', 'UA', '87%', 'Below Average'],
+                ['Argentina', '2021/22', 'Net Exporter', 'Surplus', 'Stock Increase', 'RUS', '27%', 'Below Average'],
+                ['India', '2021/22', 'Net Exporter', 'Surplus', 'Stock Increase', 'RUS', '98%', 'Below Average'],
+                ['Kazakhstan', '2021/22', 'Net Exporter', 'Surplus', 'Stock Increase', 'RUS', '5%', 'Below Average'],
+                ['Russian Federation', '2021/22', 'Net Exporter', 'Surplus', 'Stock Increase', 'RUS', '12%', 'Below Average'],
+                ['Ukraine', '2021/22', 'Net Exporter', 'Surplus', 'Stock Increase', 'UA', '37%', 'Below Average'],
+                ['United States of America', '2021/22', 'Net Exporter', 'Surplus', 'Stock Increase', 'UA', '72%', 'Below Average'],
             ];
 
         var button = document.getElementById('templateBtn');
@@ -122,6 +128,7 @@
         // Gives functionality to 'Choose File'
         var button = document.getElementById('fileBtn');
         button.addEventListener('click', select);
+
         function select() {
             console.log('Should open file dialog');
             var input = document.createElement('input');
@@ -150,7 +157,6 @@
                     // Stores csvString in the browser
                     localStorage.csvText = csvString;
                 }
-
             }
             input.click();
         }
@@ -175,6 +181,72 @@
             console.log(localStorage.csvText);
         }
         // UPLOAD BUTTON
+
+        // FILE TEST
+        var button = document.getElementById('displayBtn');
+        var textarea = document.getElementById('testOutput');
+
+        button.addEventListener('click', () => {
+            console.log('Should be displaying text shortly...');
+            var input = document.createElement('input');
+
+            // OLD POC CODE
+            input.type = 'file';
+
+            // Initial proof of concept begins here
+            input.onchange = e => {
+                var files = input.files;
+
+                if (files.length == 0) return;
+
+                const file = e.target.files[0];
+
+                var reader = new FileReader();
+
+                reader.onload = readerEvent => {
+                    const file = readerEvent.target.result;
+                    const lines = file.split(/\r\n|\n/);
+                    textarea.value = lines.join('\n');
+                    // Should be able to insert any localStorage string here
+                    // and have it display in the text box
+                    //localStorage.test = textarea.value;
+                    const grid = [];
+                    for (i = 0; i < lines.length; i++) {
+                        // Sets the array entry to each line of document
+                        grid[i] = lines[i];
+                        // Formats string to input syntax
+                        // grid[i] = `"${i}": [${grid[i]}],`;
+                    }
+                    //for (j = 0; j < grid.length; j++) {
+                        //console.log(grid[j]);
+                //}
+                var topRow = grid[0];
+                    const fields = [];
+                    for (j = 0; j < topRow.length; j += topRow.indexOf(",")) {
+                        for (g = 0; g < (j + 1); g++) {
+                            fields[g] = topRow.slice(j, topRow.indexOf(","));
+                        }
+                        console.log(j);
+                        console.log(`${fields[j]}`);
+                    }
+                //console.log(fields);
+                };
+                reader.onerror = (readerEvent) => alert(readerEvent.target.error.name);
+
+                reader.readAsText(file);
+            }
+            // OLD POC CODE */
+
+            // DISABLE OLD POC AND ENABLE BELOW FOR LOCALSTORAGE
+            // AND VICE VERSA
+            // Test for csv string stored in localStorage
+            //const lines = localStorage.csvText.split(/\r\n|\n/);
+            //textarea.value = lines.join('\n');
+
+            // INPUT STAYS ENABLED
+            input.click();
+        });
+                    // FILE TEST
     </script>
     <!-- JAVASCRIPT -->
 </body>

@@ -6,7 +6,7 @@ div {
 }
 
 #file {
-    width: 50%;
+    width: 100%;
 }
 
 button {
@@ -43,5 +43,12 @@ button {
 #fileTest {
     width: 100%;
     background-color: #ffefd5;
+}
+#displayTest {
+    display: grid;
+    width: 100%;
+}
+#testOutput {
+    height: 300px;
 }
 /* File TEST component */
